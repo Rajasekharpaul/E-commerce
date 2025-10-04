@@ -1,0 +1,7 @@
+.filters { display: grid; grid-template-columns: 1fr 220px 120px; gap: 12px; padding: 12px; margin: 16px 0; position: relative; }
+.suggestions { position: absolute; left: 12px; right: 352px; top: 60px; background: #101226; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; box-shadow: var(--shadow-sm); z-index: 10; }
+.suggestions .item { padding: 10px 12px; cursor: pointer; }
+.suggestions .item:hover { background: rgba(255,255,255,0.04); }
+@media (max-width: 640px) { .filters { grid-template-columns: 1fr; } }
+
+

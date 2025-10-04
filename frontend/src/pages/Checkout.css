@@ -1,0 +1,10 @@
+.checkout { grid-template-columns: 1fr; gap: 16px; }
+.form { padding: 16px; display: grid; gap: 12px; }
+.form .two { grid-template-columns: 1fr 1fr; }
+.form .grid { display: grid; gap: 10px; }
+.summary { padding: 16px; display: grid; gap: 10px; align-self: start; }
+.row { display: flex; align-items: center; justify-content: space-between; }
+.done { padding: 24px; }
+@media (min-width: 960px) { .checkout { grid-template-columns: 1.5fr 1fr; } }
+
+

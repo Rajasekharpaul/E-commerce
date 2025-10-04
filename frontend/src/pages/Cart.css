@@ -1,0 +1,11 @@
+.empty { padding: 24px; display: grid; gap: 12px; }
+.cart { grid-template-columns: 1fr; gap: 16px; }
+.cart-items { padding: 8px; }
+.cart-row { display: grid; grid-template-columns: 72px 1fr 96px 120px; gap: 12px; align-items: center; padding: 8px; }
+.cart-row img { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; }
+.qty { width: 96px; }
+.summary { padding: 16px; display: grid; gap: 10px; align-self: start; }
+.summary .row { display: flex; align-items: center; justify-content: space-between; }
+@media (min-width: 960px) { .cart { grid-template-columns: 1.5fr 1fr; } }
+
+

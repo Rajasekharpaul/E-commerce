@@ -1,0 +1,51 @@
+# ------------------------------------
+# Global Ignore Rules
+# ------------------------------------
+
+# Node.js artifacts (Backend and Frontend)
+**/node_modules
+**/npm-debug.log
+**/yarn-error.log
+**/yarn-debug.log
+
+# Dependency lock files that can be ignored if you use the other one exclusively
+# package-lock.json is usually kept in the monorepo root, but often ignored inside subfolders.
+# However, for monorepos, it's safer to generally keep these:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Runtime data
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# ------------------------------------
+# Backend Specific Rules
+# ------------------------------------
+# Environment variables (Crucial for security!)
+/backend/.env
+
+# Runtime output
+/backend/coverage
+/backend/dist
+/backend/build
+
+# ------------------------------------
+# Frontend Specific Rules
+# ------------------------------------
+# Build output (Vite default directory)
+/frontend/dist
+
+# Environment variables (Crucial for security!)
+/frontend/.env
+
+# Vite specific files
+.vite

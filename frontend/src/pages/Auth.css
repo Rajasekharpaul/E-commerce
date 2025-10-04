@@ -1,0 +1,5 @@
+.auth { max-width: 420px; margin: 24px auto; padding: 20px; }
+.auth .form { display: grid; gap: 10px; }
+.error { background: #3b0b0b; color: #ffd1d1; padding: 8px 10px; border-radius: 8px; }
+
+
