@@ -18,6 +18,12 @@ app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/cart", require("./routes/cartRoutes"));
 app.use("/api/order", require("./routes/orderRoutes"));
 
+// --- ADD THIS TEMPORARY HEALTH CHECK ---
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "API is running successfully!" });
+});
+// ----------------------------------------
+
 // Error handler middleware (must be after all routes)
 app.use(errorHandler);
 
