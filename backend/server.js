@@ -8,17 +8,22 @@ connectdb();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
-app.use(express.json());
+// --- START ROBUST CORS FIX ---
+// The CLIENT_URL environment variable will hold the Vercel domain.
+const CLIENT_URL = process.env.CLIENT_URL;
 
-// --- START CORS FIX ---
-const allowedOrigins = [
-    // 1. **REQUIRED:** Add your Vercel Frontend URL here (MUST BE HTTPS)
-    "https://e-commercefrontend-kappa.vercel.app/", 
-    // 2. Keep localhost for local development testing
-    "http://localhost:5173"
-];
+const corsOptions = {
+    origin: CLIENT_URL,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Crucial for sending cookies/headers/tokens
+};
+
+// Replace the simple app.use(cors()); with the secure, explicit options
+app.use(cors(corsOptions)); 
+// --- END ROBUST CORS FIX ---
+
+// Middleware
+app.use(express.json());
 
 // Routes
 app.use("/api/products", require("./routes/productRoutes"));
