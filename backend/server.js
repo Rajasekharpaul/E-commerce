@@ -12,6 +12,14 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+// --- START CORS FIX ---
+const allowedOrigins = [
+    // 1. **REQUIRED:** Add your Vercel Frontend URL here (MUST BE HTTPS)
+    "https://e-commercefrontend-kappa.vercel.app/", 
+    // 2. Keep localhost for local development testing
+    "http://localhost:5173"
+];
+
 // Routes
 app.use("/api/products", require("./routes/productRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
